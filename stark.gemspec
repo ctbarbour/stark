@@ -25,17 +25,20 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<thrift>, ["!= 0.9.1", "~> 0.9.0"])
+      s.add_runtime_dependency(%q<thrift>, ["!= 0.9.1", "~> 0.11.0"])
       s.add_development_dependency(%q<rdoc>, ["~> 4.0"])
       s.add_development_dependency(%q<hoe>, ["~> 3.7"])
+      s.add_development_dependency(%q<test-unit>)
     else
-      s.add_dependency(%q<thrift>, ["!= 0.9.1", "~> 0.9.0"])
+      s.add_dependency(%q<thrift>, ["!= 0.9.1", "~> 0.11.0"])
       s.add_dependency(%q<rdoc>, ["~> 4.0"])
       s.add_dependency(%q<hoe>, ["~> 3.7"])
+      s.add_development_dependency(%q<test-unit>)
     end
   else
-    s.add_dependency(%q<thrift>, ["!= 0.9.1", "~> 0.9.0"])
+    s.add_dependency(%q<thrift>, ["!= 0.9.1", "~> 0.11.0"])
     s.add_dependency(%q<rdoc>, ["~> 4.0"])
     s.add_dependency(%q<hoe>, ["~> 3.7"])
+    s.add_development_dependency(%q<test-unit>)
   end
 end
